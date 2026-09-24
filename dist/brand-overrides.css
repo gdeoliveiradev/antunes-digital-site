@@ -1,0 +1,55 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+}
+
+.brand-symbol {
+  width: 30px;
+  height: 54px;
+  flex: 0 0 30px;
+  background: url('./assets/antunes-symbol.png') center / 96px 96px no-repeat;
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  font: 500 1.08rem/.92 "Space Grotesk", sans-serif;
+  letter-spacing: .17em;
+}
+
+.brand-wordmark > span {
+  color: #f4f2f3;
+  font-weight: 500;
+}
+
+.brand-wordmark strong {
+  color: var(--red);
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  margin-top: 5px;
+}
+
+.result-type {
+  display: inline-flex !important;
+  width: auto;
+  border: 1px solid #642235;
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: #ff718e !important;
+  font: 600 .72rem "Space Grotesk", sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 8px 0 0 !important;
+}
+
+@media (max-width: 800px) {
+  .brand { min-width: 0; gap: 8px; }
+  .brand-symbol { width: 24px; height: 46px; flex-basis: 24px; background-size: 82px 82px; }
+  .brand-wordmark { font-size: .82rem; }
+  .brand-wordmark strong { font-size: .98rem; }
+  .site-header { padding-left: 16px; }
+}
+
