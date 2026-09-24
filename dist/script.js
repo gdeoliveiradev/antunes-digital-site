@@ -94,4 +94,3 @@ document.querySelector('#copy-result')?.addEventListener('click', async event =>
   setTimeout(() => button.textContent = previous, 1800);
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
-

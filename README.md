@@ -92,4 +92,3 @@ O uso de IA faz parte do processo de desenvolvimento e produtividade; as decisõ
 ---
 
 Este repositório representa um projeto em construção e aprendizado contínuo.
-
