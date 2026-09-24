@@ -21,6 +21,7 @@ window.addEventListener('pointermove', event => {
 
 const form = document.querySelector('#diagnostic-form');
 const result = document.querySelector('#diagnostic-result');
+const whatsappNumber = '5561984505306';
 let briefing = '';
 
 const diagnosticRoutes = [
@@ -73,6 +74,7 @@ form?.addEventListener('submit', event => {
   const problem = document.querySelector('#problem').value.trim();
   const diagnosis = analyzeProblem(problem);
   briefing = `Pré-diagnóstico — ${business}\nNome: ${name}\nContato: ${contact}\nProblema: ${problem}\nCaminho sugerido: ${diagnosis.type}\nLeitura inicial: ${diagnosis.description}\nFluxo: ${diagnosis.flow.join(' → ')}`;
+  document.querySelector('#send-whatsapp').href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(briefing)}`;
   document.querySelector('#result-title').textContent = `${name}, identificamos um caminho inicial.`;
   document.querySelector('#result-problem').textContent = diagnosis.description;
   document.querySelector('#result-type').textContent = diagnosis.type;
@@ -84,7 +86,9 @@ form?.addEventListener('submit', event => {
   result.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 document.querySelector('#restart')?.addEventListener('click', () => {
-  result.hidden = true; form.hidden = false;
+  result.hidden = true;
+  form.hidden = false;
+  document.querySelector('#send-whatsapp').href = '#';
 });
 document.querySelector('#copy-result')?.addEventListener('click', async event => {
   await navigator.clipboard.writeText(briefing);

@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=4" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./brand-overrides.css" />
+  <link rel="stylesheet" href="./contact-overrides.css" />
 </head>
 <body>
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -131,7 +132,7 @@
         <label>Seu WhatsApp ou e-mail<input id="contact" name="contact" autocomplete="email" placeholder="Como podemos responder?" required /></label>
         <label>O que hoje dá trabalho?<textarea id="problem" name="problem" rows="4" placeholder="Ex.: recebemos pedidos por vários canais e perdemos o acompanhamento..." required></textarea></label>
         <button class="button primary" type="submit">Organizar meu desafio <span>↗</span></button>
-        <p class="form-note">O diagnóstico se adapta ao desafio descrito e gera um resumo para revisão antes do envio.</p>
+        <p class="form-note">O diagnóstico se adapta ao desafio descrito. Você revisa o resumo antes de enviá-lo pelo WhatsApp.</p>
       </form>
       <div class="diagnostic-result" id="diagnostic-result" aria-live="polite" hidden>
         <div><span>DIAGNÓSTICO INICIAL</span><button type="button" id="restart">Refazer</button></div>
@@ -139,8 +140,11 @@
         <p id="result-problem"></p>
         <p class="result-type" id="result-type"></p>
         <div class="result-flow" id="result-flow"></div>
-        <p class="result-note">Este é um ponto de partida conceitual. A solução ideal nasce após entender a rotina, as pessoas e o impacto real.</p>
-        <button class="button ghost" type="button" id="copy-result">Copiar pré-diagnóstico</button>
+        <p class="result-note">Este é um ponto de partida conceitual. Envie o resumo para continuarmos a conversa e entendermos a rotina, as pessoas e o impacto real.</p>
+        <div class="result-actions">
+          <a class="button primary" id="send-whatsapp" href="#" target="_blank" rel="noopener">Enviar no WhatsApp <span>↗</span></a>
+          <button class="button ghost" type="button" id="copy-result">Copiar pré-diagnóstico</button>
+        </div>
       </div>
     </section>
   </main>
@@ -148,6 +152,11 @@
   <footer>
     <div class="footer-mark">ANTUNES <strong>DIGITAL</strong></div>
     <p>Tecnologia prática para negócios.</p>
+    <div class="footer-contacts" aria-label="Contatos da Antunes Digital">
+      <a href="https://wa.me/5561984505306" target="_blank" rel="noopener"><span>WhatsApp</span><strong>+55 (61) 98450-5306 ↗</strong></a>
+      <a href="tel:+5561984505306"><span>Ligação</span><strong>+55 (61) 98450-5306</strong></a>
+      <a href="mailto:gabrieldeoliveiradev@gmail.com"><span>E-mail</span><strong>gabrieldeoliveiradev@gmail.com</strong></a>
+    </div>
     <div class="footer-bottom"><span>Brasília, DF · Brasil</span><span>© <span id="year"></span> Antunes Digital</span><a href="#inicio">Voltar ao topo ↑</a></div>
   </footer>
   <script src="./script.js"></script>

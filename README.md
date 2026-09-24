@@ -10,6 +10,8 @@ Site institucional da **Antunes Digital**, uma iniciativa pessoal voltada à cri
 
 `MVP / Active development` — primeira versão funcional, responsiva e em evolução contínua.
 
+**Live website:** [antunesdigital.pages.dev](https://antunesdigital.pages.dev)
+
 ## Sobre o projeto · About
 
 O projeto nasceu para posicionar a Antunes Digital como uma empresa de soluções digitais, sem limitar a marca ao modelo tradicional de agência de marketing.
@@ -21,7 +23,7 @@ O site apresenta:
 - processo de descoberta e desenvolvimento;
 - princípios da empresa;
 - conceito **Antunes Lab** para futuros produtos e experimentos;
-- formulário de pré-diagnóstico com resposta adaptada ao problema informado;
+- formulário de pré-diagnóstico com resposta adaptada e envio do briefing pelo WhatsApp;
 - experiência responsiva para desktop e dispositivos móveis.
 
 ## Diferencial técnico · Key feature
@@ -56,6 +58,7 @@ Abra `dist/index.html` no navegador ou sirva a pasta `dist` com um servidor HTTP
 ```text
 dist/
 ├── assets/
+├── contact-overrides.css
 ├── favicon.svg
 ├── index.html
 ├── script.js
@@ -67,7 +70,7 @@ dist/
 - [x] Identidade visual e layout responsivo
 - [x] Conteúdo institucional inicial
 - [x] Pré-diagnóstico adaptativo
-- [ ] Envio seguro das solicitações para o canal comercial
+- [x] Envio das solicitações para o WhatsApp comercial após revisão do visitante
 - [ ] Política de privacidade e consentimento de dados
 - [ ] Métricas de acesso e conversão
 - [ ] Domínio próprio
